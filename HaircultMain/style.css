@@ -177,6 +177,15 @@ main {
 
 .service-card p {
     color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.service-card .price {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ffd700;
+    margin-top: 1rem;
 }
 
 /* About Section */
@@ -219,31 +228,141 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: row;
+        padding: 1rem;
+    }
+
+    .logo {
+        font-size: 1.4rem;
     }
 
     .nav-links {
-        flex-direction: column;
-        gap: 0.5rem;
-        text-align: center;
+        flex-direction: row;
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .nav-links a {
+        padding: 0.25rem 0.5rem;
+    }
+
+    .hero {
+        min-height: 400px;
+        padding: 2rem 1rem;
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .hero p {
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+    }
+
+    .services {
+        padding: 2rem 1rem;
     }
 
     .services h2,
     .about h2,
     .contact h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
     }
 
     .service-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .about {
+        padding: 2rem 1rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    .contact {
+        padding: 2rem 1rem;
+    }
+
+    .contact p {
+        font-size: 1rem;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.75rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .nav-links {
+        gap: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .hero {
+        min-height: 300px;
+        padding: 1.5rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .services h2,
+    .about h2,
+    .contact h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .service-card {
+        padding: 1rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .service-card p {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+    .service-card .price {
+        font-size: 1.1rem;
+    }
+
+    footer {
+        padding: 1.5rem 1rem;
+        font-size: 0.9rem;
     }
 }
