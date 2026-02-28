@@ -1,0 +1,117 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>haircult. • An Elevated Specialty Hair Experience</title>
+
+  <!-- fonts (keep it simple: one serif + one sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 120;
+    const sectionHeight = section.clientHeight;
+    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+
+<body>
+  <div class="container">
+    <header>
+      <nav class="navbar">
+        <div class="logo">haircult.</div>
+
+        <ul class="nav-links">
+          <li><a href="#home">home</a></li>
+          <li><a href="#services">services</a></li>
+          <li><a href="#about">about</a></li>
+          <!-- contact is hidden for now -->
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-content">
+		<p class="kicker">Windsor, Ontario • By Appointment</p>
+          <h1>haircult.</h1>
+          <p>
+            An elevated specialty hair experience focused on polished styling, seamless extensions, and customized treatments.
+          </p>
+          <button class="cta-button">Coming Soon</button>
+        </div>
+      </section>
+
+      <section id="services" class="services">
+        <h2>services</h2>
+
+        <div class="service-grid">
+          <div class="service-card">
+            <h3>event and daily styles</h3>
+            <p>Blowouts, event styling, braids, hot-tool styles, and structured updos.</p>
+          </div>
+
+          <div class="service-card">
+            <h3>extensions</h3>
+            <p>Fully customized hair enhancements with seamless blending and intentional placement.</p>
+          </div>
+
+          <div class="service-card">
+            <h3>treatments</h3>
+            <p>Designed to strengthen, smooth, and restore.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <h2>about</h2>
+        <p>
+Haircult is an elevated hair experience for people who want their hair to actually hit. Think polished blowouts, seamless extensions, and treatments that make great hair your only vice.
+
+Every appointment starts with a real consultation so we’re not guessing. We’re intentional about placement, blend, movement, and longevity. Extensions that disappear. Blowouts that last. Treatments that leave your hair smoother, stronger, and noticeably healthier. It’s detail-focused without feeling fussy.
+
+This is elevated hair with presence. Sculpted, seamless, and quietly addictive.
+        </p>
+      </section>
+
+      <!-- contact section (not live yet)
+      <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Email: info@haircult.com</p>
+        <p>Phone: (555) 123-4567</p>
+        <p>Hours: Mon–Sat 9AM–6PM | Sun 10AM–4PM</p>
+      </section>
+      -->
+    </main>
+
+    <footer>
+      <p>&copy; 2026 haircult. all rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
